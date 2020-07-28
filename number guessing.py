@@ -1,7 +1,5 @@
 import random
 
-import random
-
 def generate_key():
     digit = [x for x in range(10)]
     key = [None] * 4

@@ -16,7 +16,9 @@ def guess_a_number():
     qualified = False
     while not qualified:
         guess = input("enter your 4 digit: ")
-        if not guess.isdigit():
+        if guess == "help":
+            print(key)
+        elif not guess.isdigit():
             print("Please input digit only.")
         elif len(guess) != 4:
             print("Please input 4 digit only.")

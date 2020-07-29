@@ -17,7 +17,7 @@ def guess_a_number():
     while not qualified:
         guess = input("enter your 4 digit: ")
         if guess == "help":
-            print(key)
+            help()
         elif not guess.isdigit():
             print("Please input digit only.")
         elif len(guess) != 4:
@@ -32,10 +32,17 @@ def guess_a_number():
         digit[i] = int(guess[i])
     return digit
 
+def help():
+    help = ["*"] * 4
+    help[m] = key[m]
+    print(help)
+
+
+
 key = generate_key()
-# print(key)
 a = 0
 count = 0
+m = random.randrange(4)
 while (a != 4):
     a = 0
     b = 0
